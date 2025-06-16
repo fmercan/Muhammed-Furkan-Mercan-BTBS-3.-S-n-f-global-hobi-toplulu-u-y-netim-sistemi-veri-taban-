@@ -1,0 +1,211 @@
+/* Genel Stil */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9eff5; /* Açık gri tonu */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Daha geniş ekranlarda sabit genişlik */
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Daha belirgin gölge */
+    border-radius: 12px; /* Daha yuvarlak köşeler */
+}
+
+/* Başlık ve Navigasyon */
+header {
+    background-color: #2c3e50; /* Koyu lacivert */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #34495e; /* Daha açık lacivert */
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Menü elemanlarını yan yana hizala */
+    justify-content: center; /* Ortala */
+}
+
+nav ul li {
+    display: inline-block; /* Yan yana durmaları için */
+}
+
+nav ul li a {
+    display: block; /* Tüm alanı tıklanabilir yap */
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Yumuşak geçişler */
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c; /* Turkuaz tonu */
+    color: #fff;
+}
+
+/* Ana İçerik */
+main {
+    padding: 20px 0;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #1abc9c; /* Başlık altına çizgi */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form Stilleri */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 20px); /* Padding'i hesaba kat */
+    padding: 12px 10px;
+    border: 1px solid #cdd4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1abc9c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.3);
+}
+
+/* Buton Stilleri */
+.btn {
+    background-color: #1abc9c; /* Turkuaz */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px; /* Butonlar arası boşluk */
+}
+
+.btn:hover {
+    background-color: #16a085; /* Koyu turkuaz */
+    transform: translateY(-2px); /* Hafif yukarı kalkma efekti */
+}
+
+.btn-danger {
+    background-color: #e74c3c; /* Kırmızı */
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Tablo Stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden; /* Köşelerin görünmesi için */
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #555;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+table tr:nth-child(even) { /* Çift satırlara farklı renk */
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f0f8ff; /* Satır üzerine gelince renk değişimi */
+}
+
+/* Mesaj Stilleri */
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex; /* İkon eklemek için esnek kutu */
+    align-items: center;
+    gap: 10px; /* İkon ve yazı arası boşluk */
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Footer Stili */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.9em;
+    border-top: 1px solid #ddd;
+    background-color: #fdfdfd;
+    border-radius: 0 0 12px 12px;
+}
